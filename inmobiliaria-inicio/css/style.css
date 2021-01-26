@@ -1,0 +1,258 @@
+:root {
+    --primario: #0ad8f3;
+    --secundario: #ffc845;
+    --negro: #000000;
+    --claro: #ffffff;
+    --gris: #eeeeee;
+    --oscuro: #0aa0b4;
+    --padding: 1rem;
+    --paddingt: 2rem;
+}
+
+body {
+    background-color: var(--gris);
+    font-family: 'Roboto', sans-serif;
+
+}
+/* Globales */
+img {
+    max-width: 100%;
+}
+p {
+    line-height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 300;
+    margin: 1rem 0 1rem 0;
+}
+h1 {
+    font-size: 2.4rem;
+}
+h2 {
+    font-size: 2.2rem;
+}
+h3 {
+    font-size: 2rem;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    margin-top: 2rem;
+    padding: var(--padding);
+    background-color: var(--primario);
+}
+.header .contenedor{
+
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: 50% 50%;
+    column-gap: 50px;
+
+}
+.header .menu {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100%;
+}
+@media (min-width:992px) {
+    .header .contenedor {
+        display: grid;
+        grid-template-columns: 50% 18% 50%;
+        grid-template-rows: 100%;
+        column-gap: 50px;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .header .nombre-sitio {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .header .menu {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 11% 11% 11%;
+        grid-template-rows: 100%;
+        column-gap: 80px;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+}
+
+.header .menu a {
+    color: var(--claro);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/** Nosotros **/
+.nosotros {
+    margin-top: 2rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .nosotros {
+        display: grid;
+        grid-template-columns: 50%  50%;
+        grid-template-rows: 100%;
+        column-gap: 50px;
+    }
+}
+.contenido-nosotros {
+    align-content: center;
+    display: grid;
+}
+.contenido-nosotros h2{
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+
+/* Venta */
+.venta {
+    
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    column-gap: 50px;
+    row-gap: 100px;
+    justify-self: stretch;  
+}
+.venta img {
+    width: 100%;
+}
+.destacada {
+    
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    
+}
+@media screen and (min-width:700px) {
+
+    .destacada {
+        grid-template-columns: 50% 50%  ;
+        grid-template-rows: 100%  ;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+}
+
+
+
+@media (min-width:768px) {
+    .venta {
+        display: grid;
+        grid-template-columns: 33% 33% 33% ;
+        column-gap: 50px;
+        row-gap: 100px;
+        justify-self: stretch;  
+    }
+    
+    .destacada {
+            /*Aquí va el posicionamiento grid */
+    }  
+}
+
+
+.card {
+    background-color: var(--claro);
+    padding: var(--padding);
+    border:1px solid #AAA;
+}
+
+.anuncio {
+    display: grid;
+}
+
+.anuncio .precio {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.precio span {
+    font-weight: 300;
+    color: var(--primario);
+}
+.boton {
+    background-color: var(--primario);
+    display: block;
+    padding: var(--padding);
+
+    text-align: center;
+    color: var(--claro);
+    text-decoration: none;
+    border: 1px solid var(--primario);
+    transition: all .3s ease;
+}
+
+.boton:hover {
+    border: 1px solid var(--primario);
+    background-color: var(--claro);
+    color: var(--primario);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primario);
+    padding-top: var(--paddingt);
+    margin-top: 2rem;
+    color: var(--claro);
+}
+
+@media (min-width:768px) {
+    .footer .contenedor {
+        display: grid;
+        grid-template-columns: 33% 20% 33% ;
+        grid-template-rows: 100%  ;
+        column-gap: 50px;
+        row-gap: 100px;
+    }
+}
+
+.footer .navegacion a {
+    display: block;
+    color: var(--claro);
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.footer .contenedor-casas {
+    display: grid;
+    grid-template-columns: 53% 50%;
+    grid-template-rows: 50% 50%;
+    column-gap: 30px;
+    row-gap: 5px;
+}
+
+.footer .contenedor-casas .casa {
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: 50% 50%  ;
+    column-gap: 30px;
+    row-gap: 5px;
+}
+.footer .contenedor-casas .casa p {
+    margin: 0;
+}
+.copyright {
+    background-color: var(--oscuro);
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+}
